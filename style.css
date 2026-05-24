@@ -1,0 +1,101 @@
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#f4f4f4;
+  padding:20px;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h1{
+  text-align:center;
+  margin-bottom:20px;
+  color:#333;
+}
+
+.form-box{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+  margin-bottom:20px;
+}
+
+.form-box input{
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+
+.form-box button{
+  background:#007bff;
+  color:white;
+  border:none;
+  padding:12px;
+  border-radius:5px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.form-box button:hover{
+  background:#0056b3;
+}
+
+.search-box{
+  margin-bottom:20px;
+}
+
+.search-box input{
+  width:100%;
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+table th,
+table td{
+  border:1px solid #ddd;
+  padding:12px;
+  text-align:center;
+}
+
+table th{
+  background:#007bff;
+  color:white;
+}
+
+.delete-btn{
+  background:red;
+  color:white;
+  border:none;
+  padding:8px 12px;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.delete-btn:hover{
+  background:darkred;
+}
+
+@media(max-width:768px){
+  table{
+    font-size:12px;
+  }
+}
