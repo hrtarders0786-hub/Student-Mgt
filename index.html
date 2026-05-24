@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management System</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-gray-100 p-4 md:p-8">
+
+<div class="max-w-6xl mx-auto bg-white p-6 rounded-xl shadow">
+
+    <h1 class="text-3xl font-bold text-center border-b pb-4 mb-6">
+        🎓 Student Management System
+    </h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- FORM -->
+        <div class="bg-gray-50 p-4 rounded border">
+
+            <h2 class="font-semibold text-lg mb-3">Add / Edit Student</h2>
+
+            <form id="studentForm" class="space-y-3">
+
+                <input type="hidden" id="editIndex" />
+
+                <input id="name" placeholder="Student Name" class="input" required />
+                <input id="father" placeholder="Father Name" class="input" required />
+                <input id="number" placeholder="Mobile Number" class="input" required />
+
+                <select id="shift" class="input">
+                    <option>Morning</option>
+                    <option>Evening</option>
+                    <option>Night</option>
+                </select>
+
+                <select id="fees" class="input">
+                    <option>Paid</option>
+                    <option>Unpaid</option>
+                </select>
+
+                <input type="date" id="date" class="input" required />
+
+                <button class="bg-blue-600 text-white w-full py-2 rounded">
+                    Save Student
+                </button>
+
+            </form>
+        </div>
+
+        <!-- TABLE -->
+        <div class="md:col-span-2">
+
+            <input id="search" placeholder="Search student..." class="input mb-3 w-full" />
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm border">
+
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th>Name</th>
+                            <th>Father</th>
+                            <th>Number</th>
+                            <th>Shift</th>
+                            <th>Fees</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="table"></tbody>
+
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
